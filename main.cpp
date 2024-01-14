@@ -1,58 +1,36 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
-class partyGuests
-{
-  public:
-    string name;
-    int number;
-    
-};
-
-char** guests(int* returnSize)
+std::vector<std::string> guests()
 {
   int namesSize;
-  
-  cout << "Insert qty" << endl;
-  cin >> namesSize;
+  std::cout << "Insert qty: ";
+  std::cin >> namesSize;
 
-  *returnSize = namesSize;        
-  
-  char** list = new char*[namesSize];
+  std::cin.ignore();
 
-  cout << "1. to start the for" << endl;
-  int select;
-  cin >> select;
+  std::vector<std::string> list;
 
-  if (select == 1)
+  for (int i = 0; i < namesSize; i++)
   {
-    for (int i = 0; i < namesSize; i++)
-    {
-      list[i] = new char[15];
-      
-      cout << "Insert Names: " << endl;
-      cin >> list[i];
-    }
+    std::string input;
+    std::cout << "Insert Name: ";
+    std::getline(std::cin, input);
+    
+    list.push_back(input);
   }
-
   return list;
 }
 
 int main(void) 
 {
+  std::vector<std::string> listona = guests();
 
-  int size;
-  char** listona = guests(&size);
+  std::cout << "Names: \n";
 
-
-  cout << "Names:" << endl;
-  for (int i = 0; i < 5; i++)
+  for (int i = 0; i < listona.size(); i++)
   { 
-    cout << listona[i] << endl;
-    delete listona[i];
+    std::cout << listona[i] << "\n";
   }
-  delete listona;
   return 0;
 }
