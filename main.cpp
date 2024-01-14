@@ -9,7 +9,7 @@ class partyGuests
     string name;
     int number;
     
-}
+};
 
 char** guests(int* returnSize)
 {
@@ -20,7 +20,7 @@ char** guests(int* returnSize)
 
   *returnSize = namesSize;        
   
-  char** list = new char*[namesSize];     // dynamically allocated array of pointers
+  char** list = new char*[namesSize];
 
   cout << "1. to start the for" << endl;
   int select;
