@@ -21,6 +21,15 @@ std::vector<std::string> guests()
   return list;
 }
 
+int sonoStatoAncheQua() {
+  int palle;
+
+  std::cout << "How many balls do you have? ";
+  std::cin >> palle;
+
+  return palle;
+}
+
 int main(void) 
 {
   std::vector<std::string> listona = guests();
