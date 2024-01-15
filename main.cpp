@@ -40,5 +40,10 @@ int main(void)
   { 
     std::cout << listona[i] << "\n";
   }
+  
+  int leSuePalle = sonoStatoAncheQua();
+
+  std::cout << leSuePalle;
+
   return 0;
 }
