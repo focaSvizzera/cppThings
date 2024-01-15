@@ -10,7 +10,6 @@ std::vector<std::string> guests()
   std::cin.ignore();
 
   std::vector<std::string> list;
-
   for (int i = 0; i < namesSize; i++)
   {
     std::string input;
